@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Stage 2 notes</title>
+</head>
+<body>
+
+	<div id="background_document">
+
+
+		<header id="header_gradient">
+			<img id="face_pic" src="images/pic.jpg" alt="picture of author face">
+			<h2>Notes for Udacity's intro to programming.</h2>
+			<p>
+				<a href="http://jigsaw.w3.org/css-validator/check/referer">
+    				<img style="border:0;width:88px;height:31px"
+        				src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+        				alt="Valid CSS!"/>
+   				 </a>
+			</p>
+			<span><a href="../stage 1 project/notes.htm">Project 1 notes</a> </span>
+		</header>
+
+
+		<div id="main_holder">
+
+			<div id="page_border_left"></div>
+			<div id="page_border_right"></div>
+
+			<main id="content_holder">
+
+				<!-- start concept -->
+				<section class="concept_holder">
+					<!-- sub-heading -->
+					<h4>
+						Basic concepts and jargon regarding programming
+					</h4>
+					
+					<article class="content">
+						<dl>
+							<dt>Program</dt>
+							<dd>
+								(usually) a sequence of instructions written in a language the computer is able to interpret. A simple program could just print 'hello'. A more useful program would be a web browser; more fun, a game!
+							</dd>
+							<dt>Computer language</dt>
+							<dd>
+								A set of unambiguous rules of a grammar for delivering a set of instructions to the computer.
+							</dd>
+							<dt>High-level language</dt>
+							<dd>
+								A computer language that requires interpretation before the computer can execute (run) it. The upside is that it is highly readable, but perhaps slower.
+							</dd>
+							<dt>Interpreter</dt>
+							<dd>
+								(In this context) A program that parses (reads) the high-level language before passing the appropriate instructions to the computer.  
+							</dd>
+							<dt>Python</dt>
+							<dd>
+								A type of high-level language.
+							</dd>
+
+						</dl>
+					</article>
+
+					<div class="concept_divider"></div>
+
+				</section>
+				<!-- end concept -->
+
+
+			    <!-- start concept -->
+			    <section class="concept_holder">
+
+			        <h4>A look at the basic constructs of programming: First up the Variable<br>
+			        	(Note: all examples are in Python.)</h4>
+
+			        <article class="content">
+			            <p>A user chosen name that is assigned to some data. The variable will now reference that data. Here is a simple <em>assignment statement</em>: <br><span><code class="inline">person = "dan"</code></span><br>The variable here is 'person' (appropriately named which may seem obvious here but should be adhered to when assigning names); the '=' equals sign indicates assignment; and 'dan' in double quotes is the data - this is a string type data. An obvious benefit is the ability to reference obscure, unintuitive peices of data.</p>
+			        </article>
+
+			        <div class="concept_divider"></div>
+			    </section>
+			    <!-- end concept -->
+
+
+			    <!-- start concept -->
+			    <section class="concept_holder">
+
+			        <h4>Strings</h4>
+
+			        <article class="content">
+			            <p>
+			            	Are a type of data. They can be empty but more usually are some sequence of characters. A string must be enclosed with the same quote, single or double, that started the string; This allows the use of quotes within a string. In python triple quotes can be used for multi-line strings.
+			            </p>
+			        </article>
+
+			        <div class="concept_divider"></div>
+			    </section>
+			    <!-- end concept -->
+
+
+
+			    <!-- start concept -->
+			    <section class="concept_holder">
+
+			        <h4>Functions (aka procedures)</h4>
+
+			        <article class="content">
+			            <p>
+			            	The purpose of functions is to reduce repetition in a program by generalizing patterns.
+
+			            	In general functions take in input and produce some output. They are self contained peices of code which means they can be defined outside the main 'flow' of the program. So on one line of code you can invoke a function with itself containing many lines of code. They can also in turn call other functions.
+
+			            	Defining functions separately allows you to construct your program in parts. Small peices of code are far easier to construct, debug, read and maintain.<br><br>
+			            </p>
+
+			            <!-- example code block -->
+			            <div class="code_block">
+
+			            	<!-- example -->
+				            <div class="example_container">
+
+<code><span class="kw">def</span><span> function_name</span><span class="grammar">():</span>
+  <span class="kw">print </span><span class="str">"hello"</span>
+</code>
+
+					        	<footer class="code_footer">
+					        		<p>
+					        			This function takes no input and it's output is a print statement. It is also unhelpfully named.
+					        		</p>
+					        	</footer>
+					        </div>
+					        <!-- end example -->
+
+					        <!-- example -->
+				        	<div class="example_container">
+
+<code><span class="kw">def</span><span> square</span><span class="grammar">(</span><span class="input">number</span><span class="grammar">):</span>
+  <span class="kw">print </span><span class="input">number </span><span class="grammar">** </span><span>2</span></code>
+
+								<footer class="code_footer">
+					        		<p>
+					        			This function is appropriately named. It takes an input, called number, and prints it's square.
+					        		</p>
+					        	</footer>
+					        </div>
+					        <!-- end example -->
+
+					        <!-- example -->
+				        	<div class="example_container">
+
+<code><span class="kw">def</span><span> sum</span><span class="grammar">(</span><span class="input">a</span><span class="grammar">, </span><span class="input">b</span><span class="grammar">):</span>
+  <span class="var">sum </span><span class="grammar">= </span><span class="input">a </span><span class="grammar">+ </span><span class="input">b</span>
+  <span class="kw">return </span><span class="var">sum</span></code>
+
+								<footer class="code_footer">
+					        		<p>
+					        			Takes two inputs, assumes they are numbers, and returns their sum.
+					        		</p>
+					        	</footer>
+					        </div>
+					        <!-- end example -->
+
+					        <!-- example -->
+				        	<div class="example_container">
+
+<code><span class="kw">def </span><span>bigger</span><span class="grammar">(</span><span class="input">a</span><span class="grammar">, </span><span class="input">b</span><span class="grammar">):</span>
+  <span class="kw">if </span><span class="input">a </span><span class="grammar">> </span><span class="input">b</span><span class="grammar">:</span>
+    <span class="kw">return </span><span class="input">a</span>
+  <span class="kw">else</span><span class="grammar">:</span>
+    <span class="kw">return </span><span class="input">b</span></code>
+
+								<footer class="code_footer">
+					        		<p>
+					        			This function takes in two numbers and returns the bigger one
+					        		</p>
+					        	</footer>
+					        </div>
+					        <!-- end example -->
+
+			        	</div>
+			        	<!-- end example block -->
+
+			        </article>
+
+			        <div class="concept_divider"></div>
+			    </section>
+			    <!-- end concept -->
+
+
+
+			    <!-- start concept -->
+			    <section class="concept_holder">
+
+			        <h4>Control flow with the <em>if</em> statement</h4>
+
+			        <article class="content">
+			            <p>
+			            	Controlling the flow of a program means some set or block of code will only be evaluated under certain conditions.
+
+			            	The computer evaluates the statement as either <em>true</em> or <em>false</em> and will read the successive lines of indented code.
+
+			            	There are many ways to test for truthness; as in the example above equality comparisons can be used. <a href="https://docs.python.org/2/library/stdtypes.html#comparisons">Python comparisons</a>. Empty strings and other sequences are consclassered <em>false</em>. <a href="https://docs.python.org/2/library/stdtypes.html#truth-value-testing">truth-value-testing</a>.
+			            </p>
+			        </article>
+
+			        <div class="concept_divider"></div>
+			    </section>
+			    <!-- end concept -->
+
+
+
+			    <!-- start concept -->
+			    <section class="concept_holder">
+
+			        <h4>While loops</h4>
+
+			        <article class="content">
+			            <p>
+			            	Are very much like <i>if</i> statements, the code indented or within the loop is evaluated if the expression is true; the principal difference being that a <em>while loop</em> or any <em>loop</em> can be evaluated any number of times. Even for ever!
+			            </p>
+			            <p>
+			            	<i>loops</i> perform some task a given number of times. This prevents much repetition. But the real value in <i>loops</i> is provclassing the ability for a program to classle and wait for input.
+			            </p>
+			            <p>
+			            	Many programs that appear to be doing nothing are actually in a loop waiting for user interaction. For example a <i>web browser, graphics program</i> or <i>computer game</i>.
+			            </p>
+			            <p>
+			            	A <i>while loop</i> will end when either the <i>test expression</i> is no longer evaluated as true or the Python keyword <em>break</em> is used.
+			            </p>
+
+			            <!-- example code block -->
+			            <div class="code_block">
+
+			            	<!-- example -->
+				        	<div class="example_container">
+
+<code><span class="kw">while</span><span> &lt;test-expression&gt;</span><span class="grammar">:</span>
+  <span>instructions..</span></code>
+
+								<footer class="code_footer">
+					        		<p>
+					        			If the test expression evaluates as true all instructions are read that are immediately indented to the while loop. 
+					        		</p>
+					        	</footer>
+					        </div>
+					        <!-- end example -->
+
+					        <!-- example -->
+				        	<div class="example_container">
+
+<code><span class="comment"># This is a python comment</span>
+<span class="comment"># the interpreter will ignore everything after the '#'</span>
+<span class="var">counter </span><span class="grammar">= </span><span>3 </span><span class="comment"># they can also be put here</span>
+<span class="kw">while </span><span class="var">counter </span><span class="grammar">&gt; </span><span>0</span><span class="grammar">:</span>
+  <span class="kw">print </span><span class="var">counter</span>
+  <span class="var">counter </span><span class="grammar">-= </span><span>1</span>
+  </code>
+
+								<footer class="code_footer">
+					        		<p>
+					        			Python is a very readable language. Set the variable <i>counter</i> to the integer 3. Initiate a <i>while loop</i>; so long as the <i>test expression</i> evaluates as true - that is if counter is a greater value than 0 - we enter the while loop's block. Then print the value of counter to the screen. Then subtract 1 from the value which counter references, setting counter to this new value.<br>
+					        			This function will print, consecutively: 3, 2, 1 at which point, the test expression will evaluate as false and this program will end.
+					        		</p>
+					        	</footer>
+					        </div>
+					        <!-- end example -->
+
+					    </div>
+					    <!-- end example block -->
+					        
+			        </article>
+
+			        <div class="concept_divider"></div>
+			    </section>
+			    <!-- end concept -->
+
+
+
+				<!-- start concept -->
+			    <section class="concept_holder">
+
+			        <h4>Debugging</h4>
+
+			        <article class="content">
+			            <p>
+			            	Is the process of finding and correcting problems and errors in a program. It is inevitable and is part of the learning process. The interpreter will report errors which prevented the program from being executed; the interpreter provclasses the exact line it occured on. But sometimes the program will run but not do as the author intended. There are three kinds of errors or <i>bugs</i> in a program.
+			            </p>
+			            <dl>
+			            	<dt>Syntax errors</dt>
+			            	<dd>These are the errors that will prevent the program from even running. Some rule of grammar or syntax has been broken and the computer does not know what to do. For example if there is no ':' after a <i>while loop</i> or <i>if statement</i>. Interpreters help with these.</dd>
+
+			            	<dt>Runtime error</dt>
+			            	<dd>The program will run but not finish: Perhaps a <i>while loop</i> has no way off ending and the interpreter ends the program.</dd>
+
+			            	<dt>Semantic error</dt>
+			            	<dd>There will be no error message, the program will run. The issue is that the computer does not do what the author wanted it to; specifically it does what is was told to do.</dd>
+			            </dl>
+			            <h5 style="text-align:left">Strategies to combat bugs</h5>
+			            <p>
+			            	A well planned, understood and documented code is most helpful. This will not only prevent problems but provclasse a friendly enviroment for solving issues.
+			            </p>
+			            <ul>
+			            	<li>
+			            		By the use of print statements return values from functions can be checked. Intermediate values of variables before and after permutations within a function can be checked via the print statement.
+			            	</li>
+			            	<li>
+			            		Retaining working versions of code before changes are made. Functions can be commented out and files renamed. <a href="https://github.com/">Github</a> itself is a version control service.
+			            	</li>
+			            </ul>
+
+			        </article>
+
+			        <div class="concept_divider"></div>
+			    </section>
+			    <!-- end concept -->
+
+
+			    <!-- start concept -->
+			    <section class="concept_holder">
+
+			        <h4>Lists</h4>
+
+			        <article class="content">
+			            <p>
+			            	Consclasser, a sequence of characters enclosed by quotes: <code class="inline">"I'm a string object"</code>. A list is a sequence of any object type enclosed in square brackets where each element is separated by a comma: <code class="inline">[ 'a', 5, ['hello'] ]</code>. Here, the first element is a string type, second an integer the third a nested list. Lists are a good way of grouping data that have some relationship. It is a data structure.<br>
+
+			            	Sequences can be indexed. This means their elements can be accessed.
+			            </p>
+
+			            <!-- example code block -->
+			            <div class="code_block">
+
+							<!-- example -->
+				            <div class="example_container">
+
+<code><span>&lt;list&gt; --&gt; </span><span class="grammar">[ </span><span>&lt;expression&gt;</span><span class="grammar">, </span><span>&lt;expression&gt; </span><span class="grammar">]</span>
+<span class="var">colours </span><span class="grammar">= [ </span><span class="str">"Orange"</span><span class="grammar">, </span><span class="str">"Red" </span><span class="grammar">]</span></code>
+
+					        	<footer class="code_footer">
+					        		<p>
+					        			General syntax and setting a variable to reference a list object of two elements both of which are string objects.
+					        		</p>
+					        	</footer>
+					        </div>
+					        <!-- end example -->
+
+
+					        <!-- example -->
+				            <div class="example_container">
+
+<code><span>&lt;list&gt;</span><span class="grammar">[</span><span class="input">index</span><span class="grammar">]</span>
+<span class="var">colours </span><span class="grammar">= [</span><span class="str">"Orange"</span><span class="grammar">, </span><span class="str">"Red" </span><span class="grammar">, </span><span class="str">"Green" </span><span class="grammar">, </span><span class="str">"Blue" </span><span class="grammar">, </span><span class="str">"Yellow"</span><span class="grammar">]</span>
+<span class="kw">print </span><span class="var">colours</span><span class="grammar">[</span><span class="input">4</span><span class="grammar">] </span><span class="comment"># prints yellow</span>
+<span class="kw">print </span><span class="var">colours</span><span class="grammar">[</span><span class="input">0</span><span class="grammar">] </span><span class="comment"># prints orange</span>
+<span class="kw">print </span><span class="var">colours</span><span class="grammar">[</span><span class="input">1</span><span class="grammar">:</span><span class="input">4</span><span class="grammar">] </span><span class="comment"># slicing a list. prints red, green, blue</span>
+</code>
+
+					        	<footer class="code_footer">
+					        		<p>
+					        			The first element in a list has, assuming the list is not an empty one, index 0. It is possible to take a slice of a sequence as seen in the last print statement.
+					        		</p>
+					        	</footer>
+					        </div>
+					        <!-- end example -->
+
+
+					        <!-- example -->
+				            <div class="example_container">
+
+<code><span class="var">colours </span><span class="grammar">= [ </span><span class="grammar">[ </span><span class="str">"Dan"</span><span class="grammar">, </span><span class="input">28 </span><span class="grammar">]</span><span class="grammar">, </span><span class="grammar">[ </span><span class="str">"John"</span><span class="grammar">, </span><span class="input">40 </span><span class="grammar">] </span><span class="grammar">]</span>
+<span class="kw">print </span><span class="var">colours</span><span class="grammar">[</span><span class="input">0</span><span class="grammar">]</span><span class="grammar">[</span><span class="input">1</span><span class="grammar">] </span><span class="comment"># prints 28</span></code>
+
+					        	<footer class="code_footer">
+					        		<p>
+					        			How to access nested lists.
+					        		</p>
+					        	</footer>
+					        </div>
+					        <!-- end example -->
+					    
+			            </div>
+			            <!-- end example block -->
+
+			            <p>
+			            	Lists are mutable. This means the list object can be changed. Strings are immutable, they canot be changed once created. Attempts to change a string will either: create a new one or more probably incur an error.
+			            </p>
+
+			            <!-- example code block -->
+			            <div class="code_block">
+
+							<!-- example -->
+				            <div class="example_container">
+
+<code><span class="var">s </span><span class="grammar">= </span><span class="str">"hello"</span>
+<span class="var">s</span><span class="grammar">[</span><span class="input">0</span><span class="grammar">]</span><span class="grammar"> = </span><span class="str">"y"</span></code>
+
+					        	<footer class="code_footer">
+					        		<p>
+					        			This will produce an error.<br>
+					        			The string 'hello' now has no reference to it so is destroyed.
+					        		</p>
+					        	</footer>
+					        </div>
+					        <!-- end example -->
+
+
+					        <!-- example -->
+				            <div class="example_container">
+
+<code><span class="var">s </span><span class="grammar">= </span><span class="grammar">[ </span><span class="str">"Dan"</span><span class="grammar">, </span><span class="input">28 </span><span class="grammar">]</span>
+<span class="var">s</span><span class="grammar">[</span><span class="input">1</span><span class="grammar">]</span><span class="grammar"> = </span><span class="input">100</span></code>
+
+					        	<footer class="code_footer">
+					        		<p>
+					        			The second element, at index 1, is now the value 100. The list has changed.
+					        		</p>
+					        	</footer>
+					        </div>
+					        <!-- end example -->
+
+			            </div>
+			            <!-- end example block -->
+
+			        </article>
+
+			        <div class="concept_divider"></div>
+			    </section>
+			    <!-- end concept -->
+
+
+
+			    <!-- start concept -->
+			    <section class="concept_holder">
+
+			        <h4>Aliasing</h4>
+
+			        <article class="content">
+			            Is the use of more than one reference for an object. 
+			        </article>
+
+			        <div class="concept_divider"></div>
+			    </section>
+    			<!-- end concept -->
+
+
+			    <!-- start concept -->
+			    <section class="concept_holder">
+
+			        <h4>For loops</h4>
+
+			        <article class="content">
+			            <p>
+			            	Loop over the elements in a sequence. The total number of loops or iterations will be equal to the number of elements in the sequence. Attempting to iterate over an empty sequence will not produce an error; only, the for loop block of code will not be executed.  
+			            </p> 
+
+			            <!-- example code block -->
+			            <div class="code_block">
+
+			            	<!-- example -->
+				            <div class="example_container">
+
+<code><span class="comment"># syntax</span>
+<span class="kw">for </span><span class="var">&lt;name&gt; </span><span class="kw">in </span><span class="var">&lt;sequence&gt;</span><span class="grammar">:</span>
+  <span>&lt;instructions&gt;</span>
+
+<span class="comment"># basic example</span>
+<span class="var">colours </span><span class="grammar">= [</span><span class="str">"Orange"</span><span class="grammar">, </span><span class="str">"Red" </span><span class="grammar">, </span><span class="str">"Green" </span><span class="grammar">, </span><span class="str">"Blue" </span><span class="grammar">, </span><span class="str">"Yellow"</span><span class="grammar">]</span>
+<span class="kw">for </span><span class="var">colour </span><span class="kw">in </span><span class="var">colours</span><span class="grammar">:</span>
+  <span class="kw">print </span><span class="var">colour </span><span class="comment"># prints orange --> yellow</span>
+
+<span class="comment"># iterating over a duplicate list using slice notation</span>
+<span class="kw">for </span><span class="var">colour </span><span class="kw">in </span><span class="var">colours</span><span class="grammar">[:] </span><span class="comment"># &lt;-- here</span>
+  <span>&lt;do something useful&gt;</span></code>
+
+					        	<footer class="code_footer">
+					        		<p>
+					        			Do not iterate over a sequence you wish to mutate; Instead do so by using a copy. Slice notation is perfect for this.
+					        		</p>
+					        	</footer>
+					        </div>
+					        <!-- end example -->
+
+			            </div>
+			            <!-- end example block -->
+
+			        </article>
+
+			        <div class="concept_divider"></div>
+			    </section>
+    			<!-- end concept -->
+
+			</main><!-- end content -->    
+
+		</div><!-- end main holder -->
+
+		<div id="page_border_bottom"></div>
+
+	</div><!-- end document -->
+
+</body>
+</html>
+
+

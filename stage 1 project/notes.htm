@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<meta charset="UTF-8">
+	<title>CodePen - A Pen by Daniel Kidd</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+
+<body>
+  <!-- start 1st concept -->
+
+  <!-- flex container -->
+  <div class="section-container">
+
+    <!-- flex item -->
+    <!-- all main headings to <h2> tags -->
+  	<header class="main-headings">
+      <h2>
+        Basic concepts and jargon regarding the internet
+      </h2>
+    </header>
+    <!-- flex item -->
+    <section class="section-info">
+      <dl><!-- description list -->
+        <dt><b>Browser</b></dt><!-- term -->
+        <dd><!-- data -->
+          This is a program that accesses and displays web-pages. The browser requests the relevant data based on user input (such as a web address) from a server.
+        </dd>
+
+        <dt><b>Server</b></dt>
+        <dd>
+          A computer that hosts files. A server will idle until it receives a request, sending the appropriate file.
+        </dd>
+
+        <dt><b>Web-page</b></dt>
+        <dd>
+          This is a document (computer file) written in a language called <b>H</b>yper<b>T</b>ext <b>M</b>arkup
+          <b>L</b>anguage (HTML) including <b>C</b>ascading <b>S</b>tyle <b>S</b>heets (CSS) and JavaScript. The user's browser parses this code and displays the page accordingly.
+        </dd>        
+
+        <dt><b>HTTP</b> - (<b>H</b>yper<b>T</b>ext <b>T</b>ransfer <b>P</b>rotocol)</dt>
+        <dd>
+         The conventional method governing the transfer of information in the form of documents (webpages) over the internet.
+        </dd>
+        
+        <dt><b>Internet</b></dt>
+        <dd>
+          The largest computer network in the world.
+        </dd>
+      </dl><!-- close description list -->
+    </section>
+  </div> <!-- end 1st concept -->
+
+
+
+  <!-- start 2nd concept -->
+
+  <!-- flex container -->
+  <div class="section-container">
+
+    <!-- flex item -->
+    <header class="main-headings">
+      <h2>
+        Toward a conceptual understanding of web-pages
+      </h2>
+    </header>
+    <!-- flex item -->
+    <section class="section-info">
+      <p>
+        A quick analogy: HTML provides the structure of a web-page or the framework or walls and roof of a house; CSS provides the styling of all the HTML elements or the design of the rooms in a house such as wall colour or furnishings; JavaScript provides the interaction a web-page can offer or (the analogy falters here a little) the alarm system, electronic garage door, TV.
+      </p>
+      <p>
+        DOM (Document Object Model) - Is a representation of the structure of a document where every element is a node; all further connected nodes are nested elements. This convention provides a way for programs and other programming languages to interface with the document.
+      </p>
+    </section> 
+    <!-- flex item -->
+    <!-- all sub-headings to be <h4> tags -->
+    <header class="sub-headings">
+      <h4>The structure of an HTML document:</h4>
+    </header>
+
+    	<!-- text in purple below is html encoding -->
+    	<!-- flex item -->
+    <div class="section-info">
+    	<img src="images/html_structure.png" alt="pic not display (.png)">
+    </div>
+  
+    <!-- flex item -->
+    <header class="sub-headings">
+      <h4>A few basic tags including the use of attributes:</h4>
+    </header>
+
+    <!-- flex item -->
+    <section class="section-info">
+      <code class="code">&lt;b&gt; &lt;/b&gt;</code>
+      <span> - A tag to create bold text.</span><br><br>
+
+      <code class="code">&lt;em > &lt;/em&gt;</code>
+      <span> - A tag to emphasis (italicize) text.</span><br><br>
+
+      <code class="code">&lt;a > &lt;/a&gt;</code>
+      <span> - Anchor tag. Creates hyperlinks.</span><br><br>
+        Example; <code class="code">&lt;a href="address of website"&gt; text that is hyperlinked. &lt;/a&gt;</code><span> href is the attribute of the anchor tag.
+      </span><br><br>
+
+      <code class="code">&lt;img&gt;</code>
+      <span> - A tag used to display an image (no closing tag)</span>.<br><br>
+        Example; <code class="code">&lt;img src="URL (of image)" alt="text to display if image cannot be shown"&gt;</code>
+      <span> both src and alt are attributes.</span><br><br>
+
+      <code class="code">&lt;br&gt;</code><span> - Line break (no closing tag).</span><br><br>
+
+      <code class="code">&lt;p&gt; &lt;/p&gt;</code><span> - Paragraph.</span><br><br>
+
+      <code class="code">&lt;div&gt; &lt;/div&gt;</code>
+      <span> - A block element that is used as a generic container for other elements.</span><br><br>
+
+      <code class="code">&lt;span&gt; &lt;/span&gt;</code>
+      <span> - An inline element that is used as a generic container for text. </span><br>
+    </section>
+
+    <!-- flex item -->
+    <section class="section-info">
+      <p>
+        Most HTML elements are either block or inline. The main difference between the pair is the automatic formatting of line breaks for the block elements.
+      </p>
+    </section>
+
+    <!-- flex item -->
+    <header class="sub-headings">      
+        <h4>Advice from the professionals:</h4>
+    </header>
+
+    <!-- flex item -->
+    <section class="section-info">
+      <span>
+        When learning to create web-pages it is good practice to try to visualize what it should look like by reading the code and vice-versa. All elements are housed in rectangular boxes, many of these are nested. A helpful exercise is to breakdown a web-page into its container boxes, with a pencil and paper perhaps, and to use WebDev tools to verify.<br><br>
+        <strong>To do this we must first understand HTML layout and the box-model so..</strong>
+      </span>
+    </section>
+  </div> <!-- end 2nd concept -->
+
+
+
+  <!-- start of concept 3 -->
+
+  <!-- flex container -->
+  <div class="section-container">
+
+    <!-- flex item -->
+    <header class="main-headings">
+      <h2>
+        Combining HTML and CSS
+      </h2>
+    </header>
+
+    <!-- flex item -->
+    <header class="sub-headings">
+      <h4>How HTML and CSS combine:</h4>
+    </header>
+    <!-- flex item -->
+    <div class="section-info">
+      <img src="images/insert_css.png" alt=".png">
+    </div>
+
+    <!-- flex item -->
+    <header class="sub-headings">
+      <h4>How CSS works</h4>
+    </header>
+    <!-- flex item -->
+    <div class="section-info">
+      <!-- include little info -->
+      <img src="images/css_intro.png" alt="pic not display (.png)">           
+    </div>
+
+    <!-- flex item -->
+    <header class="sub-headings">
+      <h4>Inheritance and Specificity</h4>
+    </header>
+    <!-- flex item -->
+    <section class="section-info">
+      <p>An HTML element will inherit all the rules that apply to it.<br><br>
+        <strong>What if there are conflicting rules? What if one rule states we are to have
+          <span style="color:blue">blue</span> text and another <span style="color:red">red</span>?</strong><br><br>
+          As we have already seen even the most basic web-pages have nested elements. The element's
+          ancestors ( those elements whose tags they are defined within ) will in many cases have their own styling rules. This problem is solved by having only the most specific rules applied - most specific being a style rule defined for the element the content is held in; they become less specific as  the ancestor elements are traversed. And in cases where specificity proves inconclusive there are a few arbitrary rules. For example: an <strong>id</strong> selector has more computed points (specificity) than a <strong>class</strong> selector.<br><br>
+
+          <a href="http://www.smashingmagazine.com/2007/07/27/css-specificity-things-you-should-know/">This page is quite helpful</a><br><br>
+
+          Finally, only <strong>text</strong> related properties are inherited. <strong>box</strong> related properties are ignored.
+      </p>
+    </section>
+
+    <!-- flex item -->
+    <header class="sub-headings">
+      <h4>The box-model</h4>
+    </header>
+
+            <!-- unique flex container -->
+    <!-- to house the pic of box model and expo -->
+    <div class="section-container" style="flex-flow:row">
+      <!-- this flex:none value disallows the image to shrink
+            this prevents distortion -->
+            <!-- flex item -->
+      <div class="section-info" style="margin:auto; flex:none">
+        <img src="images/box_model.jpg" alt=".jpg">
+      </div>
+            <!-- flex item -->
+      <section class="section-info" style="margin:8px;">
+        <span>Every HTML element is treated as a rectangular box with these properties:<br></span>
+        <dl>
+          <dt>Content</dt> 
+          <dd>This is the text or image.</dd>
+          <dt>Padding</dt>
+          <dd>Transparent encompassing box used to create space around around content</dd>
+          <dt>Border</dt>
+          <dd>Used to frame an element</dd>
+          <dt>Margin</dt>
+          <dd>Used to separate or create space around an element</dd>
+        </dl>
+
+          <p><strong>Pro tip:</strong>
+            The actual width and height of an element as it appears on the page will be width/height + padding  + border (in both directions). By using this <abbr title="Cascading Style Sheets">CSS</abbr> rule <code class="code">box-sizing: border-box;</code> the element's width and height properties will refer to the overall size.
+          </p>
+      </section>
+
+    </div><!-- close the inner flex container -->
+
+    <header class="sub-headings">
+      <h4>Layout</h4>
+    </header>
+
+    <section class="section-info">
+
+      <h4><strong>Flexbox</strong></h4>
+
+      <p>
+        The box-model deals with the size of individual elements and it's immediate surroundings.
+        But to structure the page as we wish requires something else. There are many different methods to put elements where we wish on a page.
+      </p>
+      
+        Flexbox is a module - a set of related code - designed to improve ease of layout on all screen sizes. <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes">According to Mozilla (the firefox browser developer)</a> flexbox:<blockquote><em>is a layout mode providing for the arrangement of elements on a page such that the elements behave predictably when the page layout must accommodate different screen sizes and different display devices.</em>(A future oriented module)</blockquote>
+
+      <p>
+        To use flexbox an element is nominated via the declaration <code class="code">display: flex;</code> as a flex container. All child elements of this container are now considered as flex items. They will respond to instructions from this container. For example <code class="code">flex-direction: column;</code> will have the flex items laid out vertically from top to bottom (unless stated otherwise). Flex items determine how they will respond to each other. For example <code class="code">flex-grow: Value;</code> sets the rate at which the flex item grows, when the window is resized, as a proportion to the other items.
+      </p>
+      <img src="images/flex_intro.png" alt=".png">
+
+    </section>
+
+    <header class="sub-headings">
+      <h4>Things to consider</h4>
+    </header>
+
+    <section class="section-info">
+
+      <dl>
+        <dt>Browser support</dt>
+        <dd>Both <abbr title="Hyper Text Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr> are in continual development. For maximum compatibility consider those users running older versions of their browser and whether even the latest versions are equipped to handle recent innovations. 
+        Here is a good reference <a href="http://www.w3schools.com/default.asp">w3schools</a>.</dd>
+
+        <dt>Semantic tags</dt>
+        <dd>Using the most appropriate tag for the content it holds helps both: search engines and other programs parse the code and the author and other developers to read, understand and maintain it.<br>
+        According to the <a href="www.w3.org/">World Wide Web Consortium (W3C)</a> a consensus on the use of semantic tags:<blockquote><em>Allows data to be shared and reused across applications, enterprises, and communities.</em></blockquote></dd>
+
+        <dt>Pro tip</dt>
+        <dd>You can have your <a href="http://validator.w3.org/#validate_by_input">HTML</a> and <a href="http://jigsaw.w3.org/css-validator/#validate_by_input">CSS</a> verified and checked for compliance with standards. Errors are highlighted including details. Icons, provided by these sites, can be displayed to alert users to any standards adhered to.</dd>
+
+        <dt>Avoiding repetition</dt>
+        <dd>Sensible planning should, initially, take the form of: layout (from big to small) and checking for persistent themes. With good planning our styling code can contain generic rules allowing inheritance by many selectors. It becomes easier to choose the appropriate semantic tags. The ideal is code structured by purpose and content. When changes to appearance and such are to be made, having distinct code in one place to alter will save much time through errors and ease of maintenance. Computers should repeat themselves not humans!</dd>
+      </dl>
+
+    </section>
+  </div><!-- end of 3rd concept -->
+
+
+</body>
+
+
+</html>

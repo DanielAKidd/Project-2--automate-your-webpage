@@ -1,0 +1,48 @@
+/* useful for elements */
+* {
+	box-sizing: border-box;
+}
+
+/* container for each section */
+.section-container {
+	display: flex;
+	flex-flow: column;
+	font-family: Verdana;
+	font-weight: normal;
+}
+
+
+/* main headings */
+.main-headings {
+	background-color: #333;
+	border-radius: 15px;
+	color: white;
+	/*create slight gap between diff
+	flex items */
+	margin: 8px;
+	/*pad around content*/
+	padding: 10px;
+}
+
+/* .. */
+.sub-headings {
+	background-color: #AB9B7D;
+	border-radius: 15px;
+	margin: 8px auto;
+	padding: 10px;
+}
+
+/* info for each section */
+.section-info {
+	background-color: #E6E6E6;
+	color: #222222;
+	border-radius: 20px;
+	margin: 8px auto;
+	padding: 15px;
+}
+
+/* for any example code */
+.code {
+	background-color: #CCCCCC;
+	color: #407AD6;
+}

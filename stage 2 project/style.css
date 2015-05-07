@@ -1,0 +1,176 @@
+* {
+	box-sizing: border-box;
+}
+body {
+    /* this is to set the background
+    	pattern for the entire page */
+	background-color: white;
+	/* By default, the image is repeated so it covers the entire element. */
+	background-image: 
+		linear-gradient(90deg, rgba(59, 71, 55, 0.5) 50%, transparent 50%),
+		linear-gradient(rgba(110, 92, 42, 0.5) 50%, transparent 50%);	
+	background-size: 25px 25px;
+	margin: 50px;
+	line-height: 1.5;
+}
+h4 {
+	border-top: 3px solid #e3e3e3;
+	border-bottom: 3px solid #e3e3e3;
+	padding: 10px;
+}
+dd {
+	padding-bottom: 10px;
+}
+a {
+	text-decoration: none;
+}
+
+
+/* -------------------------- */
+
+
+/* create style of 'A4 paper bg' */
+#background_document {
+	background-color: white;
+	border: 1px solid black;
+}
+
+#header_gradient {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+
+	background: linear-gradient(
+		to top, 
+		rgb(194, 194, 14), 
+		rgb(232, 162, 0)
+		);
+}
+
+#page_border_bottom {
+	border-top: 3px solid #00FFFF;
+	margin: 10px 10px 20px;
+	padding: 10px;
+}
+
+#face_pic {
+	height: 8%;
+	width: 8%;
+}
+/* ------------------------- */
+
+
+/* ------------------------- */
+
+/* all content other than header */
+#main_holder {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 40px;
+	padding: 0px 50px;
+}
+
+#content_holder {
+	order: 2;
+	border-left: 3px solid #e3e3e3;
+	border-right: 3px solid #e3e3e3;
+	padding: 10px;
+	/* top, right/left, bottom */
+	margin: 20px 10px 10px;
+	font-family: Georgia, Serif;
+}
+
+#page_border_left {
+	order: 1;
+	border-right: 3px solid #00FFFF;
+}
+#page_border_right {
+	order: 3;
+	border-left: 3px solid #00FFFF;
+}
+/* -------------------------- */
+
+
+/* holds each concept */
+.concept_holder {
+	border-left: 3px solid #e3e3e3;
+	border-right: 3px solid #e3e3e3;
+	padding: 10px;
+	/* top, right/left, bottom */
+	margin: 20px 10px 10px;
+}
+
+.content {
+	padding: 10px 0px;
+}
+
+.concept_divider {
+	border-top: 3px solid #F59127;
+	margin: 20px 0px;	
+}
+/* ----------------- */
+
+
+/* Used construct example code blocks */
+
+.code_block {
+	display: flex;	
+	flex-flow: row wrap;
+	justify-content: space-around;
+	font-family: Verdana, Geneva, sans-serif;
+	color: white;
+}
+
+.example_container {
+	max-width: 45%;
+	margin: 10px;
+}
+
+.code_footer {
+	background-color:  #F59127;
+	text-indent: 15px;
+	padding: 5px;	
+}
+
+code {
+	display: block;
+	background-color: #1d1f21;
+	color: #E3E858;	
+	font-family: monospace;
+	padding: 15px;
+	white-space: pre;
+}
+
+/* used to style inline code */
+code.inline {
+	display: inline;
+	padding: 2px;
+}
+
+
+/* -- used for coloring example code -- */
+
+/* python keywords */
+.kw {
+	color: #00FFFF;
+}
+/* python grammar */
+.grammar {
+	color: #ffffff;
+}
+/* python string */
+.str {
+	color: #2AF514;
+}
+/* input, args */
+.input {
+	color: #E3780E;
+}
+/* vars */
+.var {
+	color: #858AA6;
+}
+/* python comments */
+.comment {
+	color: #CF421B;
+}
